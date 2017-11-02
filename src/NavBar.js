@@ -25,8 +25,8 @@ class NavBar extends Component {
                     <li className="active"><a href="/">Home</a></li>
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
-                    <li><a href="#">Logout</a></li>
-                    <li className="active"><a href="#" data-toggle="modal" data-target="#squarespaceModal">Login / Signup</a></li>
+                    <li><a href="#" onClick={this.props.handleLogout} id="log-out-btn" style={{display:'none'}}>Logout</a></li>
+                    <li className="active"><a href="#" data-toggle="modal" data-target="#squarespaceModal" id="log-in-btn">Login / Signup</a></li>
                 </ul>
             </div>
         </div>
@@ -44,14 +44,14 @@ class NavBar extends Component {
                     </div>
                      <form onSubmit={ this.props.handleSubmitLog }>
                         <div className="form-group">
-                            <label for="inputEmail1">Email address</label>
-                           <input value={ this.props.username } onChange={this.props.handleUsernameChange} type="email" className="form-control" id="inputEmail2" placeholder="Enter email" />
+                            <label for="inputEmail1">User Name</label>
+                           <input value={ this.props.username } onChange={this.props.handleUsernameChange} type="text" className="form-control" placeholder="Enter username" />
                         </div>
                         <div className="form-group">
                             <label for="inputPassword1">Password</label>
                             <input value={ this.props.password } onChange={this.props.handlePasswordChange} type="password" className="form-control" id="inputPassword2" placeholder="Password" />
                         </div>
-                        <button type="submit" className="btn btn-default">Submit</button>
+                        <button type="submit" className="btn btn-default" data-toggle='modal' data-target='#squarespaceModal'>Submit</button>
                     </form>
                     <br />
                     <div className="modal-header">
@@ -60,8 +60,8 @@ class NavBar extends Component {
 
                     <form onSubmit={ this.props.handleSubmit }>
                         <div className="form-group">
-                            <label for="inputEmail2">Email address</label>
-                            <input value={ this.props.username } onChange={this.props.handleUsernameChange} type="email" className="form-control" id="inputEmail2" placeholder="Enter email" />
+                            <label for="inputEmail2">User Name</label>
+                            <input value={ this.props.username } onChange={this.props.handleUsernameChange} type="text" className="form-control" placeholder="Enter username" />
                         </div>
                         <div className="form-group">
                             <label for="inputPassword2">Password</label>
@@ -71,7 +71,7 @@ class NavBar extends Component {
                             <label for="confirmPassword">Confirm</label>
                             <input value={ this.props.password } onChange={this.props.handlePasswordChange} type="password" className="form-control" id="confirmPassword" placeholder="Confirm Password" />
                         </div>
-                        <button type="submit" className="btn btn-default">Submit</button>
+                        <button type="submit" className="btn btn-default" data-toggle='modal' data-target='#squarespaceModal'>Submit</button>
                     </form>
 
                     <div className="modal-footer">
