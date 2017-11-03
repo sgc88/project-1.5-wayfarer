@@ -1,7 +1,7 @@
-// Developer TODO: Define App component defintion here
 import React, { Component } from 'react';
 
 class Post extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -19,16 +19,20 @@ class Post extends Component {
       <div onClick={e =>this.onClick(e)}>
         <div className={`postComponent row ${this.state.expand}`}>
       <div className="col-xs-3">
-      <img className="cityImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRejUuLVpp1bpqc4xfzmFKQaQGkKG_LY-PrneVoW_KeF8nK2Ia3" alt="City"/>
+      <img className="cityImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs4IcRyT_hLcN4VNMTj7M136R3FBH4tlT86UUQ7CZq5wnl4YgImg" alt="City"/>
       </div>
       <div className="col-xs-9">
-      <h4 style={{marginBottom:0}}>Post Title</h4>
-      <p>This city is amazing!blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+      <h4 style={{marginBottom:0}}>Post Title: {this.props.title}</h4>
+      <p class="description">{this.props.description}</p>
+      <i class="fa fa-trash-o fa-lg delete"></i>
+
       </div>
       </div>
       </div>
     );
   }
 }
+
+
 
 export default Post;
