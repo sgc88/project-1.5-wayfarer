@@ -1,88 +1,53 @@
-<!DOCTYPE HTML>
-<!--
-  Theory by TEMPLATED
-  templated.co @templatedco
-  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-
-<head>
-    <title>WayFarer</title>
-    <meta charset="utf-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-    <script src="assets/js/jquery-3.2.1.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="assets/css/loggedIn.css" />
-
-</head>
-
 <body>
-
-    <!-- Header -->
-
-    <div id="headerContainer">
-        <div class="row">
-            <div class="col-xs-2">
-                <div id="headerLogo"></div>
-            </div>
-            <div class="col-xs-4">
-                <h1 id="headerTitle">Wayfarer</h1>
-            </div>
-            <div class="col-xs-3 col-xs-offset-3">
-              <form class="form-inline" id="headerSearch">
-              <div class="form-group">
-                  <input type="input" name="search">
-              </div>
-        <div class="form-group">
-                  <button type="submit">submit</button>
-              </div>
-              </form>
-            </div>
+<div className="container">
+  <header>
+  </header>
+  <main>
+    <div className="row">
+      <div className="left col-lg-4">
+        <div className="photo-left">
+          <img className="photo" src="levi.jpg" alt="Levi's picture"/>
+          <div className="active"></div>
         </div>
+        <div className="info">
+          <h4 className="info-name">Levi Perry</h4>
+          <p className="info-join">Join date: <span>10-01-2007</span></p>
+          <p className="info-title">Web Developer</p>
+          <p className="info-city">San Francisco</p>
+       </div>
+        <p className="desc">Hey, I'm Levi. I am currently attending General Assembly WDI 41!</p>
+        <div className="social">
+          <i className="fa fa-facebook-square" aria-hidden="true"></i>
+          <i className="fa fa-twitter-square" aria-hidden="true"></i>
+          <i className="fa fa-pinterest-square" aria-hidden="true"></i>
+          <i className="fa fa-tumblr-square" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div id="profile-post-panel">
+      <div className="right col-lg-8">
+          <h3 className="post">Posts</h3>
+      </div>
+
+        <div className="profile-post">
+            <h4>Title:</h4>
+            <p>Hello, my name is Levi Perry. This is a test post for a profile page I am making.</p>
+      </div>
+
+      <div className="profile-post">
+          <h4>Title:</h4>
+          <p>Hello, my name is Levi Perry. This is a test post for a profile page I am making.</p>
     </div>
 
-    <div id="bodyContainer">
-        <div class="row">
-            <div class="col-xs-4" id="cityContainer">
-                <h1>City</h1>
-                <div class="cityComponent"></div>
-                <div class="cityComponent"></div>
-                <div class="cityComponent"></div>
-                <div class="cityComponent"></div>
-            </div>
-            <div class="col-xs-7 col-xs-offset-1" id="postContainer">
-                <div class="row" style="margin-top: 15px;">
-                    <div class="col-xs-6">
-                        <h1>London</h1>
-                        <p>United Kingdom</p>
-                    </div>
-                    <div class="col-xs-6">
-                        <img src="images/pic02.jpg" class="cityImage">
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 15px;">
-                    <div class="col-xs-1 col-xs-offset-10">
-                    <a class="w3-button w3-large w3-circle w3-xlarge w3-ripple w3-orange" style="z-index:0" id="addPostBtn">+</a>
-                    </div>
-                </div>
-                <div class="postComponent"></div>
-                <div class="postComponent"></div>
-                <div class="postComponent"></div>
-                <div class="postComponent"></div>
-                <div class="postComponent"></div>
-                <div class="postComponent"></div>
-                <div class="postComponent"></div>
-            </div>
-        </div>
-    </div>
+    <div className="profile-post">
+        <h4>Title:</h4>
+        <p>Hello, my name is Levi Perry. This is a test post for a profile page I am making.</p>
+  </div>
 
-    <footer>
-
-    </footer>
-
-
-
+  <div className="profile-post">
+      <h4>Title:</h4>
+      <p>Hello, my name is Levi Perry. This is a test post for a profile page I am making.</p>
+</div>
+</div>
+  </main>
+</div>
 </body>
-
-</html>

@@ -1,11 +1,13 @@
 // Developer TODO: Define App component defintion here
 import React, { Component } from 'react';
+import axios from 'axios'
 
 
 // import './Home.css';
 // import SearchContainer from './SearchContainer.js'
 
 class PostModal extends Component {
+
   render() {
     return (
 <div className="Home">
@@ -20,7 +22,7 @@ class PostModal extends Component {
                 </div>
                 <div className="modal-body">
                 	<h1>Create a new post</h1>
-                    <form>
+                    <form onSubmit={this.props.handleSubmitPost}>
 					 <div class="form-group">
 					 <select>
 					  <option value="london">London</option>
@@ -32,10 +34,10 @@ class PostModal extends Component {
 					 </div>
 					 <div class="form-group">
 					   <label for="title">Title</label>
-					   <input type="title" class="form-control" id="inputTitle" placeholder="" />
+					   <input value={this.props.title} onChange={this.props.handleTitleChange} type="title" class="form-control" id="inputTitle" placeholder="" />
 					 </div>
 					 <div class="form-group">
-					   <textarea class="form-control" rows="3"></textarea>
+					   <textarea  vlaue={this.props.description} onChange={this.props.handleDescriptionChange} class="form-control" rows="3"></textarea>
 					 </div>
 					 <div class="form-group">
 					 <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#postModal">Submit</button>
